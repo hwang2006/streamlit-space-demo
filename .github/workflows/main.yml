@@ -1,4 +1,4 @@
-name: Deploy to Text Summarization Demo Space
+name: Deploy to Hot Dog Classifier Demo Space
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
           mkdir -p ~/.huggingface
           echo "$HF_TOKEN" > ~/.huggingface/token
           
-      - name: Deploy to Text Summarization Demo Space
+      - name: Deploy to Hot Dog Classifier Demo Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           SPACE_NAME: "hwang2006/hot-dog-classifier-demo"
